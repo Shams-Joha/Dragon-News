@@ -1,6 +1,6 @@
-import { data } from "autoprefixer";
-import { useEffect, useState } from "react";
 
+import { useEffect, useState } from "react";
+import { NavLink } from "react-router-dom";
 
 // {
 //     "category_id": "01",
@@ -19,7 +19,7 @@ const LeftNavbar = () => {
             <h2 className="font-semibold">All Category ({categories.length})</h2>
             <div className="flex flex-col gap-4 mt-4">
                 {
-                    categories.map(category => <button key={category.category_id} className="btn bg-transparent border-none shadow-none">{category.category_name}</button>)
+                    categories.map(category => <NavLink to={`/category/${category.category_id}`} key={category.category_id} className="btn bg-transparent border-none shadow-none">{category.category_name}</NavLink>)
                 }
             </div>
         </div>
