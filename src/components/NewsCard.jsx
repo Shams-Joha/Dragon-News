@@ -6,7 +6,7 @@ const NewsCard = (props = {}) => {
         author,
         title,
         published_date,
-        thumbnail_url,
+        image_url,
         details,
         rating,
         total_view
@@ -35,9 +35,9 @@ const NewsCard = (props = {}) => {
 
             {/* Image */}
             <img
-                src={thumbnail_url}
+                src={image_url}
                 alt={title}
-                className="rounded-lg mb-4"
+                className="rounded-lg mb-4 w-full"
             />
 
             {/* Details */}
